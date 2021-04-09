@@ -1,0 +1,40 @@
+CREATE DATABASE Ad_Manager;
+
+USE Ad_Manager;
+
+CREATE TABLE Category
+(Category_ID VARCHAR(3) NOT NULL,
+Category_Name VARCHAR(50) NOT NULL,
+PRIMARY KEY (Category_ID));
+
+CREATE TABLE AdStatus
+(Status_ID VARCHAR(2) NOT NULL,
+Status_Name VARCHAR(30) NOT NULL,
+PRIMARY KEY (Status_ID));
+
+CREATE TABLE AdUser
+(User_ID VARCHAR(20) NOT NULL,
+User_FName VARCHAR (50),
+User_LName VARCHAR(50) NOT NULL,
+PRIMARY KEY (User_ID));
+
+CREATE TABLE Moderator
+(User_ID VARCHAR(20),
+PRIMARY KEY (User_ID),
+FOREIGN KEY (User_ID) references AdUser (User_ID) ON DELETE RESTRICT);
+
+CREATE TABLE Ad
+(Ad_ID int NOT NULL,
+Ad_Title VARCHAR(100) NOT NULL,
+Ad_Details VARCHAR(100),
+Ad_Date_Time DATE NOT NULL,
+Price DOUBLE NOT NULL,
+UserID VARCHAR(20) NOT NULL,
+CategID VARCHAR(3) NOT NULL,
+ModID VARCHAR(20) ,
+StatusID VARCHAR(2) NOT NULL,
+PRIMARY KEY (Ad_ID),
+FOREIGN KEY (UserID) references AdUser (User_ID) ON DELETE CASCADE,
+FOREIGN KEY (CategID) references Category (Category_ID) ON DELETE RESTRICT,
+FOREIGN KEY (ModID) references Moderator (User_ID) ON DELETE SET NULL,
+FOREIGN KEY (StatusID) references AdStatus (Status_ID) ON DELETE RESTRICT);
