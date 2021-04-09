@@ -25,6 +25,3 @@ VALUES ('1','2010 Sedan Subaru','2010 sedan car in great shape for sale','2017-0
 ('3','Smart LG TV for $200 ONLY','Smart LG TV 52 inches! Really cheap!','2017-03-15','200','ELC','Sali','Jsmith', 'AC'),
 ('4','HD Tablet for $25 only','Amazon Fire Tablet HD','2017-03-20','25','ELC','Rkale', Null , 'PN'),
 ('5','Laptop for $100','Amazing HP laptop for $100','2017-03-20','100','ELC','Rkale', Null , 'PN');
-
-SELECT *
-FROM ad;
