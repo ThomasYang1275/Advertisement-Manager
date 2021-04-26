@@ -1,0 +1,62 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: teal;
+}
+
+li {
+  float: left;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: black;
+}
+
+h1 {
+    text-align: center;
+    vertical-align: top;
+    font-size: 60px;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+}
+
+/*a:link, a:visited {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}*/
+
+/*Website that contains the css code for this neat background, https://codepen.io/CubicB/pen/jqQoVB*/
+body {
+background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, indigo, violet);
+background-size: 10000% 10000%;
+animation: bg-gradient 30s infinite; /*DO NOT EVER SET THE TIME BETWEEN COLORS TO A NUMBER LOWER THAN TEN, IT MAY CAUSE EPILEPSY!*/
+}
+
+@keyframes bg-gradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
