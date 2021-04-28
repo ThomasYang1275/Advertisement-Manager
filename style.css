@@ -23,14 +23,14 @@ li a:hover {
 }
 
 h1 {
-    text-align: center;
-    vertical-align: top;
-    font-size: 60px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 60px;
 }
 
 p {
-    text-align: center;
-    font-size: 30px;
+  text-align: left;
+  font-size: 30px;
 }
 
 /*a:link, a:visited {
