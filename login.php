@@ -1,5 +1,6 @@
 <?php 
 require_once 'dbconnect.php';
+    session_start(); // Where I learned about sessions https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
 
 /*Code from: https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php*/
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
@@ -13,8 +14,8 @@ $login_err = "";
 $password_err = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
 
+    // Check if login is empty
     if(empty(trim($_POST["login"]))){
         $login_err = "Please enter login.";
     } else{

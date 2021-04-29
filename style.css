@@ -33,6 +33,24 @@ p {
   font-size: 30px;
 }
 
+table, td, th {
+  border-collapse: collapse;
+  width: fit-content;
+  margin-top: 20px;
+}
+
+th, td{
+  text-align: left;
+  padding: 10px;
+}
+
+tr:nth-child(odd){background-color: white}
+
+th {
+  background-color: red;
+  color: white;
+}
+
 /*a:link, a:visited {
     background-color: black;
     color: white;
@@ -49,14 +67,14 @@ a:hover, a:active {
 }*/
 
 /*Website that contains the css code for this neat background, https://codepen.io/CubicB/pen/jqQoVB*/
-body {
+/*body {
 background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, indigo, violet);
 background-size: 10000% 10000%;
-animation: bg-gradient 30s infinite; /*DO NOT EVER SET THE TIME BETWEEN COLORS TO A NUMBER LOWER THAN TEN, IT MAY CAUSE EPILEPSY!*/
+animation: bg-gradient 30s infinite; /*DO NOT EVER SET THE TIME BETWEEN COLORS TO A NUMBER LOWER THAN TEN, IT MAY CAUSE EPILEPSY!
 }
 
 @keyframes bg-gradient { 
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
-}
+}*/
